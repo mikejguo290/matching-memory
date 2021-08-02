@@ -1,7 +1,8 @@
 import React from 'react';
 import { CardRow } from './cardRow/CardRow.js';
 // Add import statements below
-
+import { useSelector } from 'react-redux';
+import { selectBoard } from './boardSlice'
 
 export const Board = () => {
   // Add selected data variable and implement below

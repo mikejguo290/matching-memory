@@ -94,5 +94,15 @@ const initialState = [
   }
   
   // Add selector export statments below
-  
+
+  /* 
+  In order to create the grid of cards, the Board component will retrieve the id and contents properties from the state card objects. This will require a selector.
+  */
+  // check store, check initial state on boardSlice. state.board is an array of items {id: 0, contents: 'Provider', visible: true, matched: true}
+  export const selectBoard = (state)=> state.board.map(card => {
+    return {
+      id: card.id,
+      contents: card.contents,
+    }
+  });
   
