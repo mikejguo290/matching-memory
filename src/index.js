@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 
 ReactDOM.render(
   // Implement Provider component with store below
-  <Provider>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')
