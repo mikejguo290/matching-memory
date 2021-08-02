@@ -10,7 +10,14 @@ export const Board = () => {
   /* The logic in the Board component creates a grid of cards by rendering a calculated number of CardRow components. 
   To finish the implementation you will use the data in currentBoard to help calculate the number of CardRow components 
   and then create an array of card objects for each row. */
-  /* at least describe, if not show me what I'm supposed to implement CodeCademy!? */
+  /* 
+  at least describe, if not show me what I'm supposed to implement CodeCademy!? 
+  i don't understand what i'm supposed to do. 
+  I feel like I'm just follwing the tutorial, copying code or cargo culting. i can't predict what i'm meant to do next 
+  cos the project is flipping complicated and i don't even know what it's supposed to look like once finished. 
+  I can't read the code because the code is purposefull incomplete!
+  the context around the exercise is harder than the exercise itself! 
+  */
 
   const numberOfCards = currentBoard.length();
   const columns = 3;

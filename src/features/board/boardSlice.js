@@ -105,4 +105,9 @@ const initialState = [
       contents: card.contents,
     }
   });
+
+  // selector for getting card ids with visible boolean flag
+  // it should return a array that filters the board array and then maps that array.
+
+  export const selectVisibleIDs = (state) => state.board.filter(card => card.visible===true).map(card => card.id);
   
