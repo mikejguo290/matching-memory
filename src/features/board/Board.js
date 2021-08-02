@@ -19,7 +19,7 @@ export const Board = () => {
   the context around the exercise is harder than the exercise itself! 
   */
 
-  const numberOfCards = currentBoard.length();
+  const numberOfCards = currentBoard.length;
   const columns = 3;
   const rows = Math.floor(numberOfCards / columns);
 
