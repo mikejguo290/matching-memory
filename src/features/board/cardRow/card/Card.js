@@ -18,13 +18,16 @@ export const Card = ({ id, contents }) => {
   let cardStyle = 'resting'
   let click = () => flipHandler(id);
   
+  // default text of each card is an image. rather than the card.contents.
+  // cardText is returned by Card.
   let cardText = (
     <img src={cardLogo} className="logo-placeholder" alt="Card option" />
   );
 
   // 1st if statement
   // implement card id array membership check
-  if (false) {
+  if (visibleIDs.includes(id)) {
+    // if id is in list of visible ids, display card.contents in cardText.
     cardText = contents;
     click = () => {};
   }
