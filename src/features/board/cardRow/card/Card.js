@@ -28,6 +28,11 @@ export const Card = ({ id, contents }) => {
   let cardText = (
     <img src={cardLogo} className="logo-placeholder" alt="Card option" />
   );
+  
+  /* description of Card's dynamic behaviour 
+  When you match a pair of cards, the cards keep showing their text and stop dispatching actions 
+  (first if statement) and the text will turn green (second if statement).
+  */
 
   // 1st if statement
   // implement card id array membership check
