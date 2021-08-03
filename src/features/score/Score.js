@@ -9,10 +9,11 @@ export const Score = () => {
   // score is based on the number of cards matched
   // Add selected data variable below
 
+  // score = number of cards matched.
+  const cardsMatched = useSelector(selectMatchedIDs);
   
-
   return (
     // implement selected data inside <div>
-    <div className="score-container">Matched: 0</div>
+    <div className="score-container">Matched: {cardsMatched.length}</div>
   );
 };
