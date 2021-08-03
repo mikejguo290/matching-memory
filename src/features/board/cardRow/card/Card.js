@@ -31,8 +31,9 @@ export const Card = ({ id, contents }) => {
 
   // 1st if statement
   // implement card id array membership check
-  if (visibleIDs.includes(id)) {
-    // if id is in list of visible ids, display card.contents in cardText.
+  if (visibleIDs.includes(id) || matchedIDs.includes(id)) {
+    // 1st condition: if id is in list of visible ids, display card.contents in cardText.
+    // 2nd condition: if id is in matchedIDs array, also dispay card content.
     cardText = contents;
     click = () => {}; // set click function to return nothing instead of flipHandler(id); no flip handler, no actions dispatched. - clicking wil do nothing!
   }
