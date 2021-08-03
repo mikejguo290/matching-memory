@@ -31,7 +31,7 @@ export const Card = ({ id, contents }) => {
   if (visibleIDs.includes(id)) {
     // if id is in list of visible ids, display card.contents in cardText.
     cardText = contents;
-    click = () => {};
+    click = () => {}; // set click function to return nothing instead of flipHandler(id); no flip handler, no actions dispatched. - clicking wil do nothing!
   }
 
   // 2nd if statement
@@ -42,8 +42,8 @@ export const Card = ({ id, contents }) => {
 
   // 3rd if statement
   // implement number of flipped cards check
-  if (false) {
-    click = () => {};
+  if (visibleIDs.length===2) {
+    click = () => {}; // set click function to return nothing instead of flipHandler(id); - clicking wil do nothing!
   }
 
   return (
