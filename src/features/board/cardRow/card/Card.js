@@ -22,7 +22,8 @@ export const Card = ({ id, contents }) => {
 
   // part 22.1 new feature - Reset the unmatched cards by clicking any card
   const resetCardsClickHandler = (id) => {
-    dispatch(resetCards());
+    // dispatch resetCards action to store. 
+    dispatch(resetCards(id));
   }
 
   let cardStyle = 'resting'
@@ -59,7 +60,10 @@ export const Card = ({ id, contents }) => {
   // 3rd if statement
   // implement number of flipped cards check
   if (visibleIDs.length===2) {
-    click = () => {}; // set click function to return nothing instead of flipHandler(id); - clicking wil do nothing!
+    click = () => {
+      // new feature, 22.1 if there are two visible cards and neither match, clicking on any card dispatches resetCards action to store.
+      resetCardsClickHandler(id);
+    }; 
   }
 
   return (
