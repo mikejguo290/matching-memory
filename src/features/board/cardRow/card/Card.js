@@ -4,7 +4,7 @@ import { useSelector , useDispatch } from 'react-redux';
 // import selectors;
 import { selectVisibleIDs, selectMatchedIDs } from '../../boardSlice.js';
 // import action creators; 
-import { flipCard } from '../../boardSlice.js';
+import { flipCard, resetCards } from '../../boardSlice.js';
 
 
 let cardLogo = "https://static-assets.codecademy.com/Courses/Learn-Redux/matching-game/codecademy_logo.png";
@@ -17,8 +17,13 @@ export const Card = ({ id, contents }) => {
   // flip card action
   const flipHandler = (id) => {
     // Add action dispatch below
-    dispatch(flipCard(id))
+    dispatch(flipCard(id));
   };
+
+  // part 22.1 new feature - Reset the unmatched cards by clicking any card
+  const resetCardsClickHandler = (id) => {
+    dispatch(resetCards());
+  }
 
   let cardStyle = 'resting'
   let click = () => flipHandler(id);
