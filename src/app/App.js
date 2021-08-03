@@ -3,7 +3,9 @@ import React from 'react';
 import { Score } from '../features/score/Score.js';
 import { Board } from '../features/board/Board.js';
 // Add import statements below
-
+import { useDispatch } from 'react-redux';
+// import actions!
+import { setBoard } from '../features/board/boardSlice.js';
 
 
 const App = () => {
@@ -12,7 +14,8 @@ const App = () => {
 
   const startGameHandler = () => {
     // Add action dispatch below
-    
+    // to start the game, set the board, randomise the cards. 
+
   };
 
   const tryAgainHandler = () => {
