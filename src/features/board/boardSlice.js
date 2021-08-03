@@ -99,7 +99,7 @@ const initialState = [
   In order to create the grid of cards, the Board component will retrieve the id and contents properties from the state card objects. This will require a selector.
   */
   // check store, check initial state on boardSlice. state.board is an array of items {id: 0, contents: 'Provider', visible: true, matched: true}
-  export const selectBoard = (state)=> state.board.map(card => {
+  export const selectBoard = (state) => state.board.map(card => {
     return {
       id: card.id,
       contents: card.contents,
@@ -110,4 +110,9 @@ const initialState = [
   // it should return a array that filters the board array and then maps that array.
 
   export const selectVisibleIDs = (state) => state.board.filter(card => card.visible===true).map(card => card.id);
+
+  // The last step of the game behavior is to identify matched cards on the board using the matched property of each card object in the store. This will require a final selector.
+  // return an array of ids of cards with card.matched:true;
+
+  export const selectMatchedIDs = (state) => state.board.filter(card => card.matched===true).map(card => card.id);
   
