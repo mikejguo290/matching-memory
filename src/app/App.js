@@ -10,7 +10,7 @@ import { setBoard } from '../features/board/boardSlice.js';
 
 const App = () => {
   // Add dispatch variable below
-  
+  const dispatch = useDispatch(); //the useDispatch() hook returns a reference to the store.dispatch() method.
 
   const startGameHandler = () => {
     // Add action dispatch below
