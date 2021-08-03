@@ -39,7 +39,9 @@ export const Card = ({ id, contents }) => {
 
   // 2nd if statement
   // implement card id array membership check
-  if (false) {
+  // check if id is in array of ids of cards that match. 
+  // Using the matchedIDs data, you can now reveal the matched cards by changing their cardStyle to 'matched'
+  if (matchedIDs.includes(id)) {
     cardStyle = 'matched';
   }
 
