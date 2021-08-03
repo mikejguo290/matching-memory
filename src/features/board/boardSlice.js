@@ -25,17 +25,22 @@ const initialState = [
         );
         return setState;
       case 'board/flipCard':
+        // card.visible is set by this reducer and visibleIDs is determined by this. 
         let flipState = [...state];
         const cardID = action.payload;
-        flipState[cardID] = {...state[cardID], visible:true}
+        flipState[cardID] = {...state[cardID], visible:true} // for the card clicked on, set visible=true;
         
         const [index1, index2] = flipState
-          .filter(card => card.visible)
+          .filter(card => card.visible) // code expects expects two indexes at most. due to code on Card. if(visibleIDs.length===2){click = () => {};}
           .map(card => card.id);
         if (index2 !== undefined){
-          const card1 = flipState[index1];
+          // want to set flipState[index1] & flipState[index2] properties, so define in variables card1, card2, 
+          // use spread operator on card1, card2 in new definition of of flipState[index1]
+          const card1 = flipState[index1]; 
           const card2 = flipState[index2];
           if (card1.contents === card2.contents) {
+            // if card 1 and card 2 have the same card contents. set both card's visible to be false, match to be true
+            // this is to preserve rule that only two visible cards at most and matched cards are still displayed, both in Card.js
             flipState[index1] = {...card1, visible: false, matched: true}
             flipState[index2] = {...card2, visible: false, matched: true}
           }
