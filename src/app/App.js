@@ -4,9 +4,8 @@ import { Score } from '../features/score/Score.js';
 import { Board } from '../features/board/Board.js';
 // Add import statements below
 import { useDispatch } from 'react-redux';
-// import actions!
-import { setBoard } from '../features/board/boardSlice.js';
-
+// import action creators!
+import { setBoard,  resetCards } from '../features/board/boardSlice.js';
 
 const App = () => {
   // Add dispatch variable below
@@ -20,7 +19,7 @@ const App = () => {
 
   const tryAgainHandler = () => {
     // Add action dispatch below
-    
+    dispatch(resetCards());
   };
 
   return (
