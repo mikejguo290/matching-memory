@@ -10,11 +10,11 @@ let cardLogo = "https://static-assets.codecademy.com/Courses/Learn-Redux/matchin
 export const Card = ({ id, contents }) => {
   // Add selected data and dispatch variables below
   const visibleIDs = useSelector(selectVisibleIDs);
-  
+  const dispatch = useDispatch();
   // flip card action
   const flipHandler = (id) => {
     // Add action dispatch below
-    
+    dispatch(flipCard(id))
   };
 
   let cardStyle = 'resting'
