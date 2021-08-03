@@ -66,6 +66,15 @@ export const Card = ({ id, contents }) => {
     }; 
   }
 
+  /* 22.2 new Feature - In index.css there is a ‘no-match’ selector which makes text red and can be applied to the card style when two visible cards are not matching. 
+  The challenge here is to apply the style to the text of cards that are flipped over and not matched. */
+
+  // to target flipped over cards, visibleID=true, visibleIDs.length===2 (for two cards). to target cards that don't match. matchedIDs cannot include id.
+  if(visibleIDs.length===2 && !matchedIDs.includes(id)){
+    // if two cards are flipped up, visible and yet card id isn't in matchedIDs list, set cardStyle to change className and allow css to target element with selector.
+    cardStyle = 'no-match'
+  }
+
   return (
     <button onClick={click} className={`card ${cardStyle}`}>
       {cardText}
