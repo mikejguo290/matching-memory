@@ -15,7 +15,7 @@ const App = () => {
   const startGameHandler = () => {
     // Add action dispatch below
     // to start the game, set the board, randomise the cards. 
-
+    dispatch(setBoard());
   };
 
   const tryAgainHandler = () => {
